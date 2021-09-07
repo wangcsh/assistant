@@ -67,6 +67,19 @@ export const constantRoutes = [
       }
     ]
   },
+
+  {
+    path: '/user',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'User',
+        component: () => import('@/views/user/index'),
+        meta: { title: 'User', icon: 'form' }
+      }
+    ]
+  },
   {
     path: '/example',
     component: Layout,
@@ -86,7 +99,8 @@ export const constantRoutes = [
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
       }
-    ]
+    ],
+    hidden: true
   },
 
   {
@@ -99,7 +113,8 @@ export const constantRoutes = [
         component: () => import('@/views/form/index'),
         meta: { title: 'Form', icon: 'form' }
       }
-    ]
+    ],
+    hidden: true
   },
 
   {
@@ -158,7 +173,8 @@ export const constantRoutes = [
         name: 'Menu2',
         meta: { title: 'menu2' }
       }
-    ]
+    ],
+    hidden: true
   },
 
   {
@@ -169,7 +185,8 @@ export const constantRoutes = [
         path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
         meta: { title: 'External Link', icon: 'link' }
       }
-    ]
+    ],
+    hidden: true
   },
 
   // 404 page must be placed at the end !!!

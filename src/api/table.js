@@ -7,3 +7,10 @@ export function getList(params) {
     params
   })
 }
+export function getPage(data) {
+  return request({
+    url: '/user/page',
+    method: 'POST',
+    data: data
+  })
+}
