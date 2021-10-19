@@ -22,3 +22,26 @@ export function logout() {
     method: 'post'
   })
 }
+
+export function getUserNameInfo(param) {
+  return request({
+    url: '/oa/get',
+    method: 'post',
+    data: param
+  })
+}
+
+export function syncNewPerson(param) {
+  return request({
+    url: '/oa/sync',
+    method: 'post',
+    data: param
+  })
+}
+export function getRecord(param) {
+  return request({
+    url: '/oa/record',
+    method: 'post',
+    data: param
+  })
+}

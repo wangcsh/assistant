@@ -14,3 +14,9 @@ export function getPage(data) {
     data: data
   })
 }
+export function getAllDepartmentList() {
+  return request({
+    url: '/user/department',
+    method: 'get'
+  })
+}

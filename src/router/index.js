@@ -70,6 +70,8 @@ export const constantRoutes = [
 
   {
     path: '/user',
+    name: 'user',
+    meta: { title: 'user', icon: 'el-icon-user' },
     component: Layout,
     children: [
       {
@@ -77,6 +79,24 @@ export const constantRoutes = [
         name: 'User',
         component: () => import('@/views/user/index'),
         meta: { title: 'User', icon: 'form' }
+      },
+      {
+        path: 'all',
+        name: 'UserAll',
+        component: () => import('@/views/user/all'),
+        meta: { title: 'all', icon: 'el-icon-user-solid' }
+      }
+    ]
+  },
+  {
+    path: '/oa',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'oa',
+        component: () => import('@/views/user/bar'),
+        meta: { title: 'Oa', icon: 'el-icon-s-operation' }
       }
     ]
   },
@@ -94,13 +114,19 @@ export const constantRoutes = [
         meta: { title: 'Table', icon: 'table' }
       },
       {
+        path: 'icon',
+        name: 'Icon',
+        component: () => import('@/views/form/icon'),
+        meta: { title: 'Icon', icon: 'el-icon-cherry' }
+      },
+      {
         path: 'tree',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
       }
     ],
-    hidden: true
+    hidden: false
   },
 
   {
